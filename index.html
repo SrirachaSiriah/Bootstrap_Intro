@@ -11,6 +11,8 @@
 
     <!-- bootstrap downloaded -->
     <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <!-- My stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -22,13 +24,41 @@
 
     <main class="container bg-light text-warning">
 
-      <ul class="nav nav-pills orange nav-justified">
-        <li class="nav-item "><a class="nav-link active text-light" href="#snowboarding">Snowboarding</a></li>
-        <li class="nav-item"><a class="nav-link active text-light" href="#skiing">Skiing</a></li>
-        <li class="nav-item"><a class="nav-link active text-light" href="#sledding">Sledding</a></li>
-        <li class="nav-item "><a class="nav-link disabled text-danger" href="#tabogganing">Tabogganing</a></li>
-      </ul>
+<!--- Header ---->
 
+      <header class="bg-warning">
+        <img class="img-fluid max-width:100%; height:100px;" src="images/Mountain.jpg" alt="mountain">
+      </header>
+
+<!--- NavBar ---->
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand text-warning font-weight-bold" href="#"><i class="fas fa-snowboarding fa-2x pr-3" style="color:white"></i></a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item pl-3 active"><a class="nav-link" href="#snowboarding">Snowboarding <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item pl-3"><a class="nav-link" href="#skiing">Skiing</a></li>
+            <li class="nav-item pl-3"><a class="nav-link" href="#sledding">Sledding</a></li>
+            <li class="nav-item pl-3"><a class="nav-link disabled" href="#tabogganing">Tabogganing</a></li>
+          </ul>
+        </div>
+
+        <nav class="navbar navbar-dark bg-primary justify-content-end">
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </nav>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+      </nav>
+
+
+<!--- Content ---->
 
       <h1 class="mt-5 my-5 text-primary text-center display-3 font-weight-bold">Snowboarding</h1>
       <div class="row clearfix">
@@ -40,7 +70,7 @@
 
       <div class="row clearfix">
         <!-- first row -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
           <p class="text-primary p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -48,12 +78,22 @@
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <p class="text-primary p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, provident adipisci maxime ea dolorem beatae
             praesentium ipsam soluta natus velit consequuntur unde vero accusantium quasi aspernatur iusto eveniet, repudiandae, dolore!</p>
-
         </div>
 
-        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-            <img class="img-fluid rounded-circle p-3" src="images/snowboarding.jpg" alt="Snowboarding">
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="images/snowboarding.jpg" alt="snowboarding">
+          <div class="card-body">
+            <h5 class="card-title">Mountain Passes</h5>
+            <h6 class="card-subtitle mb-2 text-muted"> Prices, Types, Packages</h6>
+            <p class="card-text text-primary">here is some text to see what it looks like within
+              the card.</p>
+            <a href="#" class="card-link text-warning">Passes</a>
+            <a href="#" class="card-link text-warning">Packages</a>
+          </div>
         </div>
+      </div>
+
 
         <div class="container">
           <button class="btn btn-warning text-primary btn-xl border rounded-pill my-3 myBtn" type="button" name="button">View More</button>
@@ -135,9 +175,50 @@
       </div>
     </div>
 
+    <div class="container">
+
+<!--- Form ---->
+
+      <form>
+        <h1 class="text-center my-4">Subscribe to our Newsletter!</h1>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary my-4">Submit</button>
+
+      </form>
+    </div>
+
     </main>
 
-    <footer class="container bg-warning py-4">hello this is the footer it also needs bootstrap icons</footer>
+<!--- Footer ---->
+
+    <footer class="container bg-primary py-4">
+      <div class="row clearfix">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <p class="font-weight-bold pt-3 pl-5 text-light">All rights reserved</p>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 justify-content-end">
+          <i class="fab fa-youtube pt-3 ml-5 fa-2x" style="color:white"></i>
+          <i class="fab fa-facebook pt-3 ml-5 fa-2x" style="color:white"></i>
+          <i class="fab fa-instagram pt-3 ml-5 fa-2x" style="color:white"></i>
+        </div>
+      </div>
+    </footer>
 
 
   </body>
